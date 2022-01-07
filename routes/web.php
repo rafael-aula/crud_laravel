@@ -7,13 +7,13 @@ use App\Http\Controllers\ProdutosController;
 
 
 //Rotas de criação
-Route::get('/produtos/novo', [ProdutosController::class,'create']);
+Route::get('/produtos/novo', [ProdutosController::class,'create'])->name('principal');
 Route::post('/produtos/novo', [ProdutosController::class,'store'])->name('registrar_produto');
 
 
 
 //Rotas de vizualização
-Route::get('/produto/ver/{id}', [ProdutosController::class,'show']);
+Route::get('/produto/ver', [ProdutosController::class,'index'])->name('lista');
 
 
 

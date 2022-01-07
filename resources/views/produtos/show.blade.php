@@ -4,16 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Ver um produto</title>
 </head>
-<body>
-    <label for="">Nome</label> <br />
-    <input type="text" name="nome" value="{{ $produto->nome }}"> <br />
-    <label for="">Custo</label> <br />
-    <input type="text" name="custo" value="{{ $produto->custo }}"> <br />
-    <label for="">Preço</label> <br />
-    <input type="text" name="preco" value="{{ $produto->preco }}"> <br />
-    <label for="">Quantidade</label> <br />
-    <input type="text" name="quantidade" value="{{ $produto->quantidade }}"> <br />
-</body>
-</html>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Crud</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="{{ route('principal') }}">Cadastrar <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Alterar</a>
+        <a class="nav-item nav-link" href="#">Excluir</a>
+        <a class="nav-item nav-link" href="{{ route('lista') }}">Lista de itens</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Produto</th>
+              <th scope="col">Custo</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Quantidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach ($produtos as $produto)
+            <tr>
+                <th scope="row">{{ $produto->id }}</th>
+                <td>{{ $produto->nome }}</td>
+                <td>{{ $produto->custo }}</td>
+                <td>{{ $produto->preço }}</td>
+                <td>{{ $produto->quantidade }}</td>
+              <td>
+                <button type="button" class="btn btn-success"><i class="fas fa-edit">Alterar</i></button>
+              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt">Excluir</i></button>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

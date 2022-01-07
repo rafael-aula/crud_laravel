@@ -10,7 +10,12 @@ class ProdutosController extends Controller
  
     public function index()
     {
-        //
+        $produtos = Produto::all();
+
+        return view('produtos.show', [
+            'produtos' => $produtos,
+        ]);
+        
     }
 
 
@@ -28,15 +33,15 @@ class ProdutosController extends Controller
             'quantidade' => $request->quantidade,
         ]);
 
-        return "Adicionado com sucesso";
+        return view('produtos.create');
     }
 
  
-    public function show($id)
+    /*public function show($id)
     {
         $produto = Produto::findOrfail($id);
         return view('produtos.show', ['produto' => $produto]); 
-    }
+    }*/
 
  
     public function edit($id)
