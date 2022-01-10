@@ -19,8 +19,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="{{ route('principal') }}">Cadastrar <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Alterar</a>
-        <a class="nav-item nav-link" href="#">Excluir</a>
         <a class="nav-item nav-link" href="{{ route('lista') }}">Lista de itens</a>
       </div>
     </div>
@@ -34,15 +32,15 @@
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Custo</label>
-            <input type="decimal" class="form-control" id="exampleFormControlInput1" placeholder="0.25" required>
+            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="0.25" required>
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Preço</label>
-            <input type="decimal" class="form-control" id="exampleFormControlInput1" placeholder="10" required>
+            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="10" required>
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Quantidade</label>
-            <input type="integer" class="form-control" id="exampleFormControlInput1" placeholder="1" required>
+            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="1" required>
           </div>
         <br>
         <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Salvar</button>

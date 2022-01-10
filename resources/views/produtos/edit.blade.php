@@ -19,8 +19,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="{{ route('principal') }}">Cadastrar <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Alterar</a>
-        <a class="nav-item nav-link" href="#">Excluir</a>
         <a class="nav-item nav-link" href="{{ route('lista') }}">Lista de itens</a>
       </div>
     </div>
@@ -28,16 +26,23 @@
 <body>
     <form action="{{ route('alterar_produto', ['id' => $produto->id]) }}" method="POST">
         @csrf
-        <label for="">Nome</label> <br />
-        <input type="text" name="nome" value="{{ $produto->nome }}"> <br />
-        <label for="">Custo</label> <br />
-        <input type="text" name="custo" value="{{ $produto->custo }}"> <br />
-        <label for="">Preço</label> <br />
-        <input type="text" name="preco" value="{{ $produto->preco }}"> <br />
-        <label for="">Quantidade</label> <br />
-        <input type="text" name="quantidade" value="{{ $produto->quantidade }}"> <br />
-        <br>
-        <button>Salvar</button>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Produto</label>
+          <input type="name" class="form-control" id="exampleFormControlInput1" name="nome" value="{{ $produto->nome }}">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Custo</label>
+          <input type="decimal" class="form-control" id="exampleFormControlInput1" name="custo" value="{{ $produto->custo }}">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Preço</label>
+          <input type="decimal" class="form-control" id="exampleFormControlInput1" name="preco" value="{{ $produto->preco }}">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Quantidade</label>
+          <input type="integer" class="form-control" id="exampleFormControlInput1" name="quantidade" value="{{ $produto->quantidade }}">
+        </div>
+        <button class="btn btn-primary">Salvar</button>
         <br>
     </form>
 </body>

@@ -19,8 +19,6 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="{{ route('principal') }}">Cadastrar <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Alterar</a>
-        <a class="nav-item nav-link" href="#">Excluir</a>
         <a class="nav-item nav-link" href="{{ route('lista') }}">Lista de itens</a>
       </div>
     </div>
@@ -44,11 +42,16 @@
                 <th scope="row">{{ $produto->id }}</th>
                 <td>{{ $produto->nome }}</td>
                 <td>{{ $produto->custo }}</td>
-                <td>{{ $produto->preço }}</td>
+                <td>{{ $produto->preco }}</td>
                 <td>{{ $produto->quantidade }}</td>
               <td>
-                <button type="button" class="btn btn-success"><i class="fas fa-edit">Alterar</i></button>
-              <button type="button" class="btn btn-danger"><i class="far fa-trash-alt">Excluir</i></button>
+                <a href='{{ route('alterar_produto', ['id' => $produto->id]) }}' class="btn btn-info edit-btn"><ion-icon name="create-outline">Editar</ion-icon></a>
+                <br>
+                <form action="/produto/excluir/{{ $produto->id }}" method="POST">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon>Deletar</button>
+                </form>
               </td>
             </tr>
             @endforeach

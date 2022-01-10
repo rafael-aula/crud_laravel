@@ -24,5 +24,5 @@ Route::post('/produto/editar/{id}', [ProdutosController::class,'update'])->name(
 
 
 //Rotas de exclução
-Route::get('/produto/excluir/{id}',[ProdutosController::class,'delete']);
-Route::post('/produto/excluir/{id}',[ProdutosController::class,'destroy'])->name('excluir_produto');
+//Route::get('/produto/excluir/{id}',[ProdutosController::class,'delete']);
+Route::delete('/produto/excluir/{id}',[ProdutosController::class,'destroy'])->name('excluir_produto');
