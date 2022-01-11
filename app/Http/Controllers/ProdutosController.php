@@ -33,7 +33,7 @@ class ProdutosController extends Controller
             'quantidade' => $request->quantidade,
         ]);
 
-        return view('produtos.create');
+        return redirect('/produto/ver');
     }
 
  
@@ -76,7 +76,7 @@ class ProdutosController extends Controller
     {
         Produto::findOrfail($id)->delete();
 
-        return redirect('/produto/ver')->with('msg', 'Produto excluido com sucesso!');
+        return redirect('/produto/ver');
     }
 
 

@@ -25,43 +25,26 @@
   </nav>
 <body>
     <form action="{{ route('registrar_produto') }}" method="POST">
-        @csrf
+       @csrf
         <div class="form-group">
             <label for="exampleFormControlInput1">Produto</label>
-            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Lápis" required>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Lápis" name="nome">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Custo</label>
-            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="0.25" required>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0.25" name="custo">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Preço</label>
-            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="10" required>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="10" name="preco">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Quantidade</label>
-            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="1" required>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="1" name="quantidade">
           </div>
         <br>
         <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Salvar</button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tente Novamente</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Se essa mensagem aparceu para você significa que não preencheu algum campo, volte e tente novamente.
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-    </div>
-        <br>
-    </form>
+        <br />
 </body>
 </html>
+
