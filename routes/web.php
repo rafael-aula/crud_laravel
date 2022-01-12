@@ -5,9 +5,12 @@ use App\Http\Controllers\ProdutosController;
 
 
 
+//Rota principal
+Route::get('/produtos', [ProdutosController::class,'start'])->name('principal');
+
 
 //Rotas de criação
-Route::get('/produtos/novo', [ProdutosController::class,'create'])->name('principal');
+Route::get('/produtos/novo', [ProdutosController::class,'create'])->name('cadastro');
 Route::post('/produtos/novo', [ProdutosController::class,'store'])->name('registrar_produto');
 
 

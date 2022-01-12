@@ -7,7 +7,13 @@ use App\Models\Produto;
 
 class ProdutosController extends Controller
 {
+
+    public function start()
+    {
+        return view('produtos.start');
+    }
  
+
     public function index()
     {
         $produtos = Produto::all();
@@ -36,14 +42,7 @@ class ProdutosController extends Controller
         return redirect('/produto/ver');
     }
 
- 
-    /*public function show($id)
-    {
-        $produto = Produto::findOrfail($id);
-        return view('produtos.show', ['produto' => $produto]); 
-    }*/
 
- 
     public function edit($id)
     {
         $produto = Produto::findOrfail($id);
@@ -64,14 +63,7 @@ class ProdutosController extends Controller
         return redirect('/produto/ver');
     }
 
-  
-    /*public function delete($id)
-    {
-        $produto = Produto::findOrfail($id);
-        return view ('produtos.delete', ['produto' => $produto]);
-    }*/
-
-
+    
     public function destroy($id)
     {
         Produto::findOrfail($id)->delete();

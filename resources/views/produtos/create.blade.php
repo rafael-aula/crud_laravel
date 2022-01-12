@@ -18,7 +18,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="{{ route('principal') }}">Cadastrar <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="{{ route('principal') }}">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{{ route('cadastro') }}">Cadastrar</a>
         <a class="nav-item nav-link" href="{{ route('lista') }}">Lista de itens</a>
       </div>
     </div>
@@ -28,19 +29,19 @@
        @csrf
         <div class="form-group">
             <label for="exampleFormControlInput1">Produto</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Lápis" name="nome">
+            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Lápis" name="nome">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Custo</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0.25" name="custo">
+            <input type="decimal" class="form-control" id="exampleFormControlInput1" placeholder="0.25" name="custo">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Preço</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="10" name="preco">
+            <input type="decimal" class="form-control" id="exampleFormControlInput1" placeholder="10" name="preco">
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Quantidade</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="1" name="quantidade">
+            <input type="integer" class="form-control" id="exampleFormControlInput1" placeholder="1" name="quantidade">
           </div>
         <br>
         <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Salvar</button>

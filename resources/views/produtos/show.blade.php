@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Ver um produto</title>
 </head>
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Crud</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +19,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="{{ route('principal') }}">Cadastrar <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="{{ route('principal') }}">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{{ route('cadastro') }}">Cadastrar</a>
         <a class="nav-item nav-link" href="{{ route('lista') }}">Lista de itens</a>
       </div>
     </div>
@@ -60,3 +62,5 @@
       </div>
     </div>
   </div>
+</body>
+</html>
