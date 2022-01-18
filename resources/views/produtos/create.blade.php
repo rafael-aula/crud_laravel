@@ -58,6 +58,7 @@
         <br>
         <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Salvar</button>
         <br />
+    </form>
 </body>
 
 </html>
