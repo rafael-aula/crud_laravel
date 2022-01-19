@@ -17,8 +17,44 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="/resources/css/app.css">
     <title>Cadastrar um novo produto</title>
 </head>
+<style>
+  :root {
+    --gap: 0,1rem;
+}
+
+.img {
+    width: 100%;
+    width: 36rem;
+    height: 36rem;
+    overflow: hidden;
+}
+
+.img img {
+    transition: all 300ms ease-in-out;
+}
+
+.img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+    width: 20px;
+    height: 20px;
+}
+
+.body {
+  min-height: 100vh;
+  max-width: 100vh;
+  margin: 5rem:
+}
+</style>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Crud</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -36,12 +72,26 @@
 </nav>
 
 <body>
-
-    <img src="https://source.unsplash.com/random/360x360" alt="Ramdom image">
-    <img src="https://source.unsplash.com/random/360x360x=1" alt="Ramdom image">
-    <img src="https://source.unsplash.com/random/360x360r=2" alt="Ramdom image">
-    <img src="https://source.unsplash.com/random/360x360d=3" alt="Ramdom image">
-
+    <div class="grid">
+        <div class="img">
+          <img src="http://source.unsplash.com/random/400x400?r=1" alt="random image from unsplash" />
+        </div>
+        <div class="img">
+          <img src="http://source.unsplash.com/random/400x400?=2" alt="random image from unsplash" />
+        </div>
+        <div class="img">
+          <img src="http://source.unsplash.com/random/400x400?r3" alt="random image from unsplash" />
+        </div>
+        <div class="img">
+          <img src="http://source.unsplash.com/random/400x400?s=81" alt="random image from unsplash" />
+        </div>
+        <div class="img">
+          <img src="http://source.unsplash.com/random/400x400?t=5" alt="random image from unsplash" />
+        </div>
+        <div class="img">
+          <img src="http://source.unsplash.com/random/400x400?v=6" alt="random image from unsplash" />
+        </div>
+    </div>
 </body>
 
 </html>
